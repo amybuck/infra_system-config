@@ -1,24 +1,12 @@
-Puppet Modules
-==============
+## Puppet modules
 
-These are a set of puppet manifests and modules that are currently being
-used to manage the OpenStack Project infrastructure.
+This set of Puppet manifests and modules are currently being used to manage the OpenStack Project infrastructure. The main entry point is in _manifests/site.pp_.
 
-The main entry point is in manifests/site.pp.
+Most of the modules are generally designed to be able to run either in Agent or Apply mode. The Puppet modules require Puppet 2.7 or greater, and the _site.pp_ manifest assumes the existence of hiera. See http://ci.openstack.org for more information.
 
-In general, most of the modules here are designed to be able to be run
-either in agent or apply mode.
+### Documentation
 
-These puppet modules require puppet 2.7 or greater. Additionally, the
-site.pp manifest assumes the existence of hiera.
+The http://ci.openstack.org documentation comes from the git://git.openstack.org/openstack-infra/system-config repository named _docs/source_.
 
-See http://ci.openstack.org for more information.
-
-Documentation
-==============
-
-The documentation presented at http://ci.openstack.org comes from
-git://git.openstack.org/openstack-infra/system-config repo's docs/source.  To
-build the documentation use
-
- $ tox -evenv python setup.py build_sphinx
+### Build documentation
+    $ tox -evenv python setup.py build_sphinx
